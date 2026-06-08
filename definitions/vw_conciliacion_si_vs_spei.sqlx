@@ -1,0 +1,15 @@
+config {
+  type: "view",
+  schema: "ds_operaciones",
+  name: "vw_resumen_conciliacion_si_spei"
+}
+
+SELECT
+    tipo_spei,
+    status,
+    COUNT(*) AS total_operaciones,
+    SUM(COALESCE(monto,0)) AS monto_total
+FROM `data-warehouse-412715.ds_operaciones.conciliacion_si_vs_spei_aplicaciones`
+GROUP BY
+    tipo_spei,
+    status
