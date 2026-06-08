@@ -1,0 +1,4 @@
+defaultProject: data-warehouse-412715
+defaultDataset: ds_operaciones
+defaultLocation: US
+dataformCoreVersion: "3.0.0"
